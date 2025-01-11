@@ -1,0 +1,50 @@
+{
+  "name": "easy-web-component",
+  "version": "0.0.0",
+  "description": "easy-web-component",
+  "keywords": [
+    "Web Component"
+  ],
+  "homepage": "https://github.com/zjffun/easy-web-component#readme",
+  "bugs": {
+    "url": "https://github.com/zjffun/easy-web-component/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjffun/easy-web-component.git"
+  },
+  "license": "MIT",
+  "author": "Jufeng Zhang <zjffun@gmail.com>",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./index.js",
+  "scripts": {
+    "eslint-fix": "eslint --fix .",
+    "prepublishOnly": "npm run test",
+    "prettier-fix": "prettier --write .",
+    "sort-package-json": "sort-package-json",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "update-snapshot": "node --experimental-vm-modules node_modules/jest/bin/jest.js -u"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "eslint": "^9.11.1",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.3.3"
+  },
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

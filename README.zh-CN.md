@@ -2,20 +2,20 @@
 
 [![npm](https://img.shields.io/npm/v/easy-web-component)](https://www.npmjs.com/package/easy-web-component)
 
-English | [简体中文](./README.zh-CN.md)
+[English](./README.md) | 简体中文
 
-## Install
+## 安装
 
-Using npm:
+使用 npm：
 
 ```sh
 npm install easy-web-component
 ```
 
-or using yarn:
+或者使用 yarn：
 
 ```sh
 yarn add easy-web-component
 ```
 
-## Usage
+## 使用
