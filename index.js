@@ -69,7 +69,7 @@ function renderScope(name = "") {
     const key = props?.key;
 
     if (!key) {
-      console.warn(`Missing key: ${name} ${localName}`, {
+      console.warn(`[easy-web-component] Missing key: ${name} ${localName}`, {
         props,
         children,
       });
@@ -95,7 +95,7 @@ function renderScope(name = "") {
     }
 
     if (elInfo.rendered) {
-      console.warn(`Duplicate key: ${name} ${key}`, {
+      console.warn(`[easy-web-component] Duplicate key: ${name} ${key}`, {
         currentProps: props,
         currentChildren: children,
         existEl: elInfo?.el,
@@ -171,6 +171,15 @@ function createEasyElementClass(ParentClass) {
 
     attributesProps(attrs) {
       for (const attr of attrs) {
+        if (/[A-Z]/.test(attr)) {
+          console.warn(
+            `[easy-web-component] Uppercase attribute: ${attr}. Uppercase attributes can not be observed using observedAttributes.`,
+            {
+              attrs,
+            },
+          );
+        }
+
         Object.defineProperty(this, attr, {
           get() {
             return this.getAttribute(attr);
